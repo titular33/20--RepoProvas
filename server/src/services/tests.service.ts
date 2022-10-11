@@ -4,6 +4,7 @@ import testsRepository from "../repositories/tests.repository";
 import categoryService from "./categories.service";
 import disciplinesService from "./disciplines.service";
 import teachersService from "./teachers.service";
+import termsService from "./terms.service";
 
 const create = async (test: CreateTestDto) => {
   const { categoryId, teacherId, disciplineId } = test;
@@ -19,7 +20,12 @@ const create = async (test: CreateTestDto) => {
 
   await testsRepository.create(test);
 };
+const getAllByDiscipline = async () => {
+    return termsService.getAllDisciplinesAndTests();
+  };
+
 
 export default {
   create,
+    getAllByDiscipline,
 };
