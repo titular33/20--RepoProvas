@@ -21,7 +21,7 @@ const create = async (test: CreateTestDto) => {
   await testsRepository.create(test);
 };
 const getAllByDiscipline = async () => {
-    return termsService.getAllDisciplinesAndTests();
+    return termsService.getAllTestsDisciplinesAndTests();
   };
 
 

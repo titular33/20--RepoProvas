@@ -3,7 +3,7 @@ import {
     NotFoundException,
     UnauthorizedException,
   } from "../common/exceptions";
-  import * as utils from "../common/utils/auth";
+  import * as utils from "../common/auth";
   import { SignUserDto } from "../interfaces/models";
   import usersRepository from "../repositories/users.repository";
   
